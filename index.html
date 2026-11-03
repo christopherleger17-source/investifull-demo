@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <base href="/investifull-demo/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="application-name" content="InvestiFull">
+  <meta name="description" content="Organiser son budget et ses projets avec InvestiFull.">
+  <title>InvestiFull</title>
+  <style>
+    html,body{margin:0;min-height:100%;background:#fffbfe;color:#211b2b;font-family:system-ui,sans-serif}
+    #loading{position:fixed;inset:0;display:grid;place-content:center;padding:28px;text-align:center}
+    #loading h1{font-size:32px;margin:0 0 12px}#loading p{max-width:32em;line-height:1.6}
+    button{background:#6750a4;color:white;border:0;border-radius:22px;padding:13px 24px;font:inherit;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div id="loading" role="status" aria-live="polite">
+    <h1>InvestiFull</h1>
+    <p id="message">Chargement de votre application…</p>
+    <button id="retry" hidden>Réessayer</button>
+  </div>
+  <script>
+    (() => {
+      let started = false;
+      window.addEventListener('flutter-first-frame', () => {
+        started = true;
+        document.getElementById('loading')?.remove();
+      });
+      const failed = () => {
+        if (started) return;
+        document.getElementById('message').textContent = 'L’application n’a pas pu démarrer. Vous pouvez réessayer sans effacer vos données.';
+        document.getElementById('retry').hidden = false;
+      };
+      window.addEventListener('error', failed, true);
+      window.addEventListener('unhandledrejection', failed);
+      document.getElementById('retry').addEventListener('click', () => window.location.reload());
+    })();
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
