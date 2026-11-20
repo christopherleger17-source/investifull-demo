@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#245842">
+<title>InvestiFull · Démo pédagogique 0.75</title>
+<style>:root{--green:#245842;--deep:#173d30;--bg:#f6f8f4;--paper:#fff;--ink:#1a352a;--muted:#60766b;--line:#dae5dc;--accent:#2c7353;--mint:#e4f2e6;--soft:#f0f5ee;--shadow:0 16px 50px rgba(23,65,43,.065);--violet:#694592;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);font-size:16px}
+*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}button:focus-visible,.skip:focus-visible{outline:3px solid #d89f51;outline-offset:3px}button:disabled{cursor:not-allowed;opacity:.56}.wrap{max-width:1130px;margin:auto;padding:0 28px}.skip{position:absolute;left:-10000px;top:0;background:white;padding:12px;z-index:10}.skip:focus{left:10px}h1,h2,h3,p{margin-top:0}h1,h2,h3{letter-spacing:-.045em}h2{font-size:clamp(1.45rem,2.2vw,1.9rem)}p{line-height:1.6}.topbar{background:var(--paper);border-bottom:1px solid var(--line)}.topbar-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:1.55rem;font-weight:850;letter-spacing:-.06em;display:flex;align-items:center;gap:10px;white-space:nowrap}.brand-highlight{color:var(--accent)}.brand-logo{width:33px;height:33px;background:var(--green);border-radius:12px;display:flex;justify-content:center;align-items:end;gap:3px;padding-bottom:7px;transform:rotate(-9deg)}.brand-logo span{width:5px;border-radius:8px;background:#e3f9d8}.brand-logo span:nth-child(1){height:9px}.brand-logo span:nth-child(2){height:16px}.brand-logo span:nth-child(3){height:12px}.top-actions{display:flex;align-items:center;gap:12px}.offline-pill{font-size:.8rem;font-weight:700;padding:7px 11px;background:#e7f5e9;border-radius:30px;color:#23784d}.offline-dot,.save-dot{width:8px;height:8px;border-radius:50%;background:#37a46c;display:inline-block;margin-right:6px}.icon-button,.soft-button{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:11px 14px;color:var(--ink);font-weight:680}.icon-button:hover,.soft-button:hover{background:var(--soft)}.hero{background:linear-gradient(115deg,#e6f1e5,#f2f5e9 65%,#e1f0e5);border-radius:30px;margin-top:24px;min-height:326px;display:grid;grid-template-columns:55% 45%;overflow:hidden}.hero-copy{padding:34px 40px}.eyebrow{font-size:.73rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#648573}.eyebrow.green{color:var(--accent)}.hero h1{font-size:clamp(2.35rem,4.6vw,3.8rem);line-height:1.07;margin:14px 0}.hero h1 em{color:var(--accent);font-style:normal}.hero p{max-width:410px;color:#536e60;font-size:.96rem}.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.hero-pills span{background:#ffffffb7;border:1px solid #cfe3d2;padding:7px 10px;font-size:.77rem;font-weight:650;border-radius:50px}.hero-art{position:relative;min-height:290px;display:flex;align-items:center;justify-content:center}.art-sun{position:absolute;background:#c9e0b9;width:270px;height:270px;border-radius:50%;right:11%;top:10%}.art-panel{position:relative;background:white;box-shadow:0 22px 55px #28513a22;border-radius:25px;padding:22px 26px;transform:rotate(-6deg);width:224px;z-index:2}.panel-top{font-size:.69rem;color:#769083;letter-spacing:.1em;font-weight:700}.panel-amount{font-size:2.3rem;font-weight:850;margin:13px 0;color:#275b40}.panel-amount small{font-size:.78rem;font-weight:500}.chart{height:83px;display:flex;align-items:end;gap:8px}.chart b{background:linear-gradient(#7ab89a,#bcdbc1);flex:1;border-radius:8px 8px 2px 2px}.panel-caption{font-size:.7rem;color:#63806b;margin-top:13px}.coin{position:absolute;background:white;border-radius:50%;display:grid;place-items:center;color:#418262;box-shadow:0 12px 35px #23513e1e;font-weight:800;z-index:3}.c1{width:65px;height:65px;right:14%;top:9%;font-size:2rem;transform:rotate(13deg)}.c2{width:52px;height:52px;left:5%;bottom:12%;font-size:1.7rem}.notice{margin-top:21px;border:1px solid #dae6dd;background:#fff;display:flex;align-items:start;gap:14px;border-radius:16px;padding:14px 20px}.notice p{margin:0;font-size:.83rem;color:#62756a}.notice-symbol{flex:none;background:#edf4e9;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#2c7353;font-weight:850}.modules-head{margin-top:42px;display:flex;align-items:end;justify-content:space-between;gap:20px}.modules-head h2{margin:5px 0}.modules-head p{font-size:.88rem;color:var(--muted);margin:0}.save-status{font-size:.76rem;background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:9px 12px;white-space:nowrap}.save-status.warn .save-dot{background:#e2a63e}.module-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}.module-card{text-align:left;background:var(--paper);padding:20px;border:1.5px solid var(--line);border-radius:21px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px;color:var(--ink);transition:transform .15s ease,border-color .15s ease}.module-card:hover{transform:translateY(-3px);border-color:var(--accent)}.module-card[aria-pressed=true]{border:2px solid var(--accent);padding:19.5px;box-shadow:0 0 0 3px #68b38b1c}.module-icon{width:55px;height:55px;border-radius:16px;display:grid;place-items:center;font-size:1.75rem}.mint{background:#e3f3e8}.peach{background:#f9ecdd}.lavender{background:#eee9fa}.module-title{font-weight:830;font-size:1.1rem;letter-spacing:-.027em}.module-desc{font-size:.83rem;color:var(--muted);line-height:1.5;min-height:42px}.module-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;font-size:.78rem;color:var(--accent);font-weight:750}.module-foot span:last-child{font-size:1.25rem}.work-area{margin-top:24px;background:var(--paper);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:27px}.area-header{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.area-header h2{margin:8px 0 0}.scene-wrap{max-width:720px;margin:26px auto 8px}.step-caption{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:.78rem;font-weight:650;gap:12px}.progress-track{height:8px;background:var(--soft);border-radius:99px;overflow:hidden;margin:12px 0 22px}.progress-fill{height:100%;background:var(--accent);border-radius:99px;transition:width .2s ease}.balance-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:25px}.balance-box{background:var(--soft);border:1px solid #e7ede4;border-radius:16px;padding:17px}.balance-box small{color:var(--muted);display:block;font-size:.75rem}.balance-box strong{display:block;font-size:1.55rem;letter-spacing:-.04em;margin-top:3px}.scene-label{font-weight:800;font-size:.72rem;color:var(--accent);letter-spacing:.11em;margin-bottom:12px}.scene-title{font-size:1.55rem;line-height:1.2;margin-bottom:12px}.scene-prompt{font-size:1rem;color:#526a5e;line-height:1.65}.choice-grid{display:grid;gap:10px;margin-top:22px}.choice{border:1.5px solid var(--line);border-radius:14px;padding:15px 17px;text-align:left;background:var(--paper);display:flex;gap:13px;align-items:center;color:var(--ink);font-weight:650;line-height:1.4}.choice:hover{background:var(--soft);border-color:var(--accent)}.choice .choice-dot{width:22px;height:22px;flex:none;border:2px solid #aac9b4;border-radius:50%}.feedback{background:#ebf6ec;border:1px solid #cfe5d1;border-radius:18px;padding:22px;margin-top:16px}.feedback h3{margin:0 0 12px;font-size:1.25rem}.feedback p{margin:0 0 17px;color:#405d4a}.feedback-badge{font-size:.77rem;color:#31704e;font-weight:760;margin-bottom:10px;display:block}.primary-button{display:inline-block;background:var(--green);color:white;border:1px solid var(--green);border-radius:12px;padding:12px 18px;font-weight:800;text-align:center}.primary-button:hover{filter:brightness(1.09)}.soft-button{font-size:.85rem}.text-button{background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:3px;text-align:left;padding:8px}.error-box{padding:13px;background:#fff0ed;color:#8f332b;border:1px solid #f0c1b9;border-radius:12px;margin-top:15px;font-size:.88rem}.scene-error{padding:12px 14px;background:#fff1e9;border-radius:10px;color:#8a4625;font-size:.85rem;margin:15px 0}.complete{background:linear-gradient(100deg,#eef7ed,#fff);border-radius:18px;border:1px solid #dcebdd;padding:24px}.complete h3{font-size:1.5rem}.complete p{color:var(--muted)}.summary-list{margin-top:17px;display:grid;gap:10px}.summary-item{padding:13px;background:white;border:1px solid var(--line);border-radius:11px;font-size:.84rem;line-height:1.5}.summary-item strong{display:block;color:var(--ink);margin-bottom:3px}.hint{font-size:.78rem;color:var(--muted)}.data-section{margin-top:24px;padding:26px 28px;background:#e6efe5;border-radius:21px;display:flex;align-items:center;justify-content:space-between;gap:30px}.data-copy{max-width:615px}.data-section h2{font-size:1.35rem;margin-bottom:6px}.data-section p{font-size:.83rem;color:#576d5e;margin:0}.data-actions{display:flex;flex-direction:column;align-items:stretch;gap:8px;min-width:250px}.data-actions .text-button{text-align:center}footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:42px 0 24px;color:var(--muted);font-size:.71rem;flex-wrap:wrap}footer .brand{font-size:.94rem;color:var(--ink)}footer .brand-logo{width:24px;height:24px;border-radius:8px;gap:2px;padding-bottom:5px}footer .brand-logo span{width:4px}.footer-brand{white-space:nowrap}footer p{margin:0}
+body.violet{--green:#5f3e8c;--deep:#422962;--bg:#f8f6fa;--ink:#322842;--muted:#72667c;--line:#e3dce9;--accent:#7450a4;--mint:#f0ecf7;--soft:#f5f0f8}.violet .hero{background:linear-gradient(110deg,#ebe1f3,#f8f3fa)}.violet .hero h1 em{color:#724d9c}.violet .art-sun{background:#e1cfef}.violet .art-panel .panel-amount{color:#6b448b}.violet .chart b{background:linear-gradient(#aa80c8,#d6c3e8)}.violet .offline-pill{background:#ede5f7;color:#65468d}.violet .hero-pills span{border-color:#e5d9ef}.violet .notice-symbol{background:#f1e9f8;color:#65468d}.violet .data-section{background:#eee5f4}.violet .data-section p{color:#675474}.violet .feedback{background:#f3eaf9;border-color:#e0cdec}.violet .feedback p{color:#5e4c70}.violet .balance-box{border-color:#eae4ef}.violet .feedback-badge{color:#744da4}
+@media(max-width:780px){.wrap{padding:0 18px}.hero{grid-template-columns:1fr}.hero-copy{padding:26px 28px}.hero-art{display:none}.hero{min-height:0}.hero h1{font-size:2.5rem}.modules-head{margin-top:30px}.module-grid{gap:9px}.module-card{padding:14px}.module-card[aria-pressed=true]{padding:13.5px}.module-desc{min-height:90px}.data-section{flex-direction:column;align-items:stretch}.data-actions{min-width:auto}}
+@media(max-width:620px){.topbar-inner{min-height:68px}.brand{font-size:1.3rem}.offline-pill{display:none}.hero{margin-top:16px;border-radius:19px}.hero-copy{padding:24px}.hero h1{font-size:2.4rem}.hero-pills span{font-size:.69rem}.notice{padding:12px}.modules-head{display:block}.save-status{margin-top:14px;display:inline-block}.module-grid{grid-template-columns:1fr}.module-card{padding:16px;display:grid;grid-template-columns:55px 1fr;gap:3px 14px}.module-card[aria-pressed=true]{padding:15.5px}.module-icon{grid-row:span 3}.module-desc{min-height:0}.module-foot{grid-column:2}.work-area{padding:18px;border-radius:16px}.area-header{align-items:start;flex-direction:column}.scene-wrap{margin:18px 0}.balance-strip{gap:8px}.balance-box{padding:12px}.balance-box strong{font-size:1.3rem}.scene-title{font-size:1.33rem}.data-section{padding:22px}.icon-button{font-size:.79rem;padding:9px}footer{display:block}footer>*{margin-bottom:8px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head><body>
+<a href="#main" class="skip">Aller au contenu</a>
+<header class="topbar"><div class="wrap topbar-inner">
+  <div class="brand"><span class="brand-logo" aria-hidden="true"><span></span><span></span><span></span></span><span>Investi<span class="brand-highlight">Full</span></span></div>
+  <div class="top-actions"><span class="offline-pill"><i class="offline-dot"></i> Hors ligne</span><button class="icon-button" id="theme" type="button" aria-label="Changer de thème"><span aria-hidden="true">◐</span> <span id="themeText">Eucalyptus</span></button></div>
+</div></header>
+<main class="wrap" id="main">
+<section class="hero"><div class="hero-copy"><span class="eyebrow">LABORATOIRE PÉDAGOGIQUE · 0.75</span><h1>Comprendre.<br>Épargner.<br><em>Avancer.</em></h1><p>Entraîne-toi à prendre des décisions financières sans risque. Une expérience claire, concrète, entièrement fictive.</p><div class="hero-pills"><span>✓ Sans inscription</span><span>✓ Sans IA</span><span>✓ Argent fictif</span></div></div>
+<div class="hero-art" aria-hidden="true"><div class="art-sun"></div><div class="art-panel"><span class="panel-top">MON PARCOURS</span><div class="panel-amount">80 € <small>objectif</small></div><div class="chart"><b style="height:30%"></b><b style="height:42%"></b><b style="height:58%"></b><b style="height:45%"></b><b style="height:72%"></b><b style="height:86%"></b></div><div class="panel-caption">Chaque petit pas compte.</div></div><div class="coin c1">€</div><div class="coin c2">✦</div></div>
+</section>
+<div class="notice" id="notice"><span class="notice-symbol">i</span><p><strong>Démo indépendante</strong> — Pas encore intégrée à l'application Flutter. Les exercices utilisent uniquement des données inventées. La sauvegarde reste sur cet appareil ; pour changer d'appareil, utilise l'export et l'import manuels.</p></div>
+<section class="modules-head"><div><div class="eyebrow green">EXPÉRIMENTER</div><h2>Choisis ton parcours</h2><p>Une décision à la fois. Aucun classement, aucune mauvaise note.</p></div><div class="save-status" id="saveStatus" aria-live="polite"><span class="save-dot"></span><span>Vérification du stockage…</span></div></section>
+<div class="module-grid" role="group" aria-label="Parcours proposés">
+<button class="module-card" id="tabFirst" data-tab="first" type="button"><span class="module-icon mint" aria-hidden="true">🚲</span><span class="module-title">Mon premier projet</span><span class="module-desc">Préparer un objectif, faire des choix, apprivoiser les imprévus.</span><span class="module-foot"><span id="footFirst">5 décisions</span><span aria-hidden="true">↗</span></span></button>
+<button class="module-card" id="tabBudget" data-tab="budget" type="button"><span class="module-icon peach" aria-hidden="true">💶</span><span class="module-title">Un mois pour s'organiser</span><span class="module-desc">Charges, réserve de sécurité, dépenses et imprévus.</span><span class="module-foot"><span id="footBudget">5 décisions</span><span aria-hidden="true">↗</span></span></button>
+<button class="module-card" id="tabShield" data-tab="shield" type="button"><span class="module-icon lavender" aria-hidden="true">🛡️</span><span class="module-title">Bouclier anti-arnaques</span><span class="module-desc">Repérer les pièges, vérifier les faits, garder son esprit critique.</span><span class="module-foot"><span id="footShield">4 situations</span><span aria-hidden="true">↗</span></span></button>
+</div>
+<section class="work-area" id="exercise" aria-labelledby="exerciseTitle"><div class="area-header"><div><span class="eyebrow green">DÉMONSTRATION INTERACTIVE</span><h2 id="exerciseTitle">Mon premier projet</h2></div><button class="soft-button" type="button" id="resetOne">↻ Recommencer ce parcours</button></div>
+<div id="errorBox" class="error-box" hidden role="alert"></div><div id="exerciseBody" aria-live="polite"></div></section>
+<section class="data-section"><div class="data-copy"><h2>Ta progression t'appartient.</h2><p>Enregistre une copie manuelle de tes exercices de démonstration ou restaure-la sur un autre navigateur. Il n'y a <strong>aucun compte cloud</strong>, aucune connexion bancaire et aucune collecte de messages.</p></div><div class="data-actions"><button type="button" class="soft-button" id="checkStorage">✓ Tester la sauvegarde sur cet appareil</button><button type="button" class="primary-button" id="export">↓ Exporter ma progression</button><button type="button" class="soft-button" id="import">↑ Importer une sauvegarde</button><button type="button" class="soft-button" id="recoverImport" hidden>↶ Annuler le dernier import</button><p class="hint">Retour possible uniquement si l’import est confirmé et qu’aucune modification n’a eu lieu ensuite.</p><input type="file" id="importFile" accept="application/json,.json" hidden><button type="button" class="text-button" id="clear">Effacer les données de cette démo</button></div></section>
+<footer><div class="brand footer-brand"><span class="brand-logo" aria-hidden="true"><span></span><span></span><span></span></span>InvestiFull</div><p>Comprendre. Épargner. Avancer. · Démonstrateur local hors ligne, non connecté à l'application officielle.</p><span>15 novembre 2026 · Prototype autonome V7</span></footer>
+</main>
+<script>const CONTENT={"schema_version":"pedagogical-drafts-1","status":"DRAFT_NOT_INTEGRATED","date":"2026-11-15","rules":{"fictional_only":true,"no_financial_account_write":true,"no_ai_required":true,"do_not_collect_personal_messages":true,"no_moral_scoring":true,"must_confirm_save_before_advancing":true},"modules":[{"id":"life_first_project_draft","title":"Mon premier projet","audience":"débutant","currency":"EUR","initial_state":{"savings_cents":2000,"goal_cents":8000},"scenes":[{"id":"goal","prompt":"Tu veux un vélo à 80 € et tu as déjà 20 €. Que fais-tu ?","choices":[{"id":"plan","label":"Je prépare mon épargne","effect_cents":0},{"id":"compare","label":"Je compare les vélos","effect_cents":0},{"id":"wait","label":"Je garde mon argent pour l'instant","effect_cents":0}]},{"id":"weekly","prompt":"Tu peux mettre de côté jusqu'à 10 € cette semaine.","choices":[{"id":"save10","label":"J'épargne 10 €","effect_cents":1000},{"id":"save5","label":"J'épargne 5 €","effect_cents":500},{"id":"save0","label":"Je n'épargne pas cette semaine","effect_cents":0}]},{"id":"temptation","prompt":"Un objet à 8 € te tente. Que fais-tu ?","choices":[{"id":"buy","label":"Je l'achète avec mon épargne","effect_cents":-800},{"id":"postpone","label":"J'attends","effect_cents":0}]},{"id":"repair","prompt":"Tu as une réparation nécessaire à 6 €.","choices":[{"id":"repair_now","label":"Je paie la réparation avec mon épargne","effect_cents":-600},{"id":"verify","label":"Je vérifie la nécessité et les possibilités","effect_cents":0}]},{"id":"next_month","prompt":"Quel rythme d'épargne te convient ensuite ?","choices":[{"id":"weekly10","label":"10 € par semaine","effect_cents":0,"weekly_target_cents":1000},{"id":"weekly5","label":"5 € par semaine","effect_cents":0,"weekly_target_cents":500},{"id":"none","label":"Je déciderai plus tard","effect_cents":0,"weekly_target_cents":0}]}]},{"id":"life_monthly_budget_draft","title":"Un mois pour s'organiser","audience":"adulte","currency":"EUR","initial_state":{"income_cents":150000,"essential_charges_cents":110000,"available_cents":40000,"reserve_cents":0},"charges":[{"id":"housing","amount_cents":60000},{"id":"energy_water","amount_cents":12000},{"id":"food","amount_cents":24000},{"id":"transport","amount_cents":9000},{"id":"phone_insurance","amount_cents":5000}],"scenes":[{"id":"reserve","choices":[{"id":"save100","operation":"reserve","amount_cents":10000},{"id":"save50","operation":"reserve","amount_cents":5000},{"id":"save0","operation":"reserve","amount_cents":0}]},{"id":"leisure","choices":[{"id":"out45","operation":"expense","amount_cents":4500},{"id":"free","operation":"expense","amount_cents":0}]},{"id":"emergency","choices":[{"id":"reserve_first","operation":"repair_reserve_first","amount_cents":11000},{"id":"available_first","operation":"expense","amount_cents":11000}]},{"id":"purchase","choices":[{"id":"buy180","operation":"expense","amount_cents":18000},{"id":"postpone","operation":"expense","amount_cents":0}]},{"id":"review","choices":[{"id":"plan","operation":"none","amount_cents":0},{"id":"adjust","operation":"none","amount_cents":0},{"id":"help","operation":"none","amount_cents":0}]}],"design_caveat":"Exercice simplifié : revenus, charges et achats sont fictifs ; ne pas présenter comme conseil personnel ni comme remplacement du suivi des échéances et dettes."},{"id":"shield_four_situations_draft","title":"Bouclier anti-arnaques : discernement","audience":"grand public, adaptation d'âge nécessaire","scenes":[{"id":"urgent_relative","prompt":"Un proche affirme avoir changé de numéro et demande 150 € immédiatement, sans appel.","preferred_action":"Contacter le proche par un canal indépendant déjà connu.","principle":"L'urgence et l'isolement sont des signaux à vérifier, pas des preuves."},{"id":"risk_free_return","prompt":"Une publicité promet de doubler 500 € en un mois sans aucun risque.","preferred_action":"Ne pas payer et vérifier les autorisations du prestataire.","principle":"Une promesse de rendement élevé sans risque est un signal d'alerte majeur."},{"id":"paid_creator","prompt":"Une créatrice rémunérée recommande une plateforme d'investissement.","preferred_action":"Distinguer publicité et conseil, vérifier indépendamment l'offre.","principle":"Une promotion rémunérée n'est pas automatiquement une fraude ; sa popularité ne prouve rien."},{"id":"legitimate_deadline","prompt":"Une administration annonce une échéance avec logo, coordonnées et lien.","preferred_action":"Accéder soi-même au site officiel et vérifier la demande.","principle":"Un message peut être authentique ; le logo ne garantit rien."}],"extra_transfer_test":{"id":"avoid_over_distrust","prompt":"Faut-il ignorer tous les messages officiels ?","answer":"Non : vérifier de façon indépendante sans cliquer sur le lien reçu."},"privacy":"Ne pas enregistrer les messages personnels. Tout nouvel historique de progression nécessite des règles distinctes de consentement et de protection des mineurs."}]};</script>
+<script>/* InvestiFull isolated pedagogical demonstrator v1. NOT application source. */
+(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;root.InvestiFullLifeEngine=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
+'use strict';
+function copy(x){return JSON.parse(JSON.stringify(x))}
+function initialize(mod){const s=copy(mod.initial_state);return {schema:1,module_id:mod.id,index:0,balances:s,decisions:[],weekly_target_cents:0};}
+function choose(mod,state,choiceId){
+  if(!state||state.module_id!==mod.id||state.schema!==1)throw Error('État incompatible');
+  const scene=mod.scenes[state.index];if(!scene) return {ok:false,error:'Aventure terminée',state};
+  const c=scene.choices.find(x=>x.id===choiceId);if(!c)return {ok:false,error:'Choix inconnu',state};
+  const next=copy(state), b=next.balances, a=Number(c.amount_cents||0);
+  if(!Number.isSafeInteger(a)||a<0)throw Error('Montant invalide');
+  if(mod.id==='life_first_project_draft'){
+    const value=Number(c.effect_cents||0),total=b.savings_cents+value;
+    if(!Number.isSafeInteger(total)||total<0)return {ok:false,error:'Épargne insuffisante',state};
+    b.savings_cents=total;if(c.weekly_target_cents!==undefined)next.weekly_target_cents=c.weekly_target_cents;
+  }else if(mod.id==='life_monthly_budget_draft'){
+    if(c.operation==='reserve'){
+      if(b.available_cents<a)return {ok:false,error:'Montant disponible insuffisant',state};
+      b.available_cents-=a;b.reserve_cents+=a;
+    }else if(c.operation==='expense'){
+      if(b.available_cents<a)return {ok:false,error:'Dépense impossible sans découvert',state};
+      b.available_cents-=a;
+    }else if(c.operation==='repair_reserve_first'){
+      if(b.available_cents+b.reserve_cents<a)return {ok:false,error:'Réparation non finançable',state};
+      const fromReserve=Math.min(b.reserve_cents,a);
+      b.reserve_cents-=fromReserve;b.available_cents-=a-fromReserve;
+    }else if(c.operation!=='none')throw Error('Opération inconnue');
+  }else throw Error('Module inconnu');
+  next.decisions.push({scene_id:scene.id,choice_id:c.id});next.index++;
+  return {ok:true,state:next};
+}
+function verify(mod,state){
+ if(!state||state.module_id!==mod.id||state.schema!==1||!Number.isSafeInteger(state.index)||state.index<0||state.index>mod.scenes.length)return false;
+ let current=initialize(mod);
+ if(!Array.isArray(state.decisions)||state.decisions.length!==state.index)return false;
+ for(const d of state.decisions){const scene=mod.scenes[current.index];if(!scene||scene.id!==d.scene_id)return false;const r=choose(mod,current,d.choice_id);if(!r.ok)return false;current=r.state;}
+ return JSON.stringify(current)===JSON.stringify(state);
+}
+return {initialize,choose,verify};
+});
+</script>
+<script>'use strict';
+/* InvestiFull pedagogical offline demo v7; no third-party dependencies or network requests. */
+const engine=InvestiFullLifeEngine;
+const mods={first:CONTENT.modules[0],budget:CONTENT.modules[1],shield:CONTENT.modules[2]};
+const STORAGE_KEY='IF_075_DEMO_V2'; // Preserve existing V2 progress in V3.
+const STORAGE_DIAG_KEY='IF_075_STORAGE_SELFTEST_V3';
+const STORAGE_RECOVERY_KEY='IF_075_DEMO_RECOVERY_V4'; // Retained key for legacy V4/V5 data; V6 recovery snapshots are bound to actual import output.
+const MAX_IMPORT=256*1024;
+const MODULE_IDS=['first','budget','shield'];
+const $=id=>document.getElementById(id);
+let active='first',current,storageAvailable=true,blocked=false,busy=false,alertText='',alertType='notice';
+const shieldOptions=[
+ [{id:'check',label:'Je rappelle le proche sur son ancien numéro',explain:'Vérifier par un canal déjà connu permet de confirmer la situation sans céder à la pression.'},{id:'rush',label:'J’envoie l’argent immédiatement',explain:'L’urgence et la demande de ne pas appeler doivent inciter à vérifier avant tout paiement.'},{id:'ignore',label:'Je bloque définitivement mon proche',explain:'La prudence est utile, mais tu peux vérifier calmement sans couper toute communication.'}],
+ [{id:'check',label:'Je vérifie le prestataire avant de décider',explain:'Un rendement aussi élevé, présenté comme sans risque, constitue un signal d’alerte majeur. Ne verse rien sans vérification indépendante.'},{id:'rush',label:'J’investis immédiatement pour profiter de l’offre',explain:'La promesse d’un gain sans risque ne suffit jamais à justifier un versement.'},{id:'ignore',label:'J’évite désormais tous les placements',explain:'Tu peux éviter cette offre tout en continuant à t’informer sur des placements réels, leurs risques et leurs frais.'}],
+ [{id:'check',label:'Je distingue la publicité du conseil et je vérifie',explain:'Une publication rémunérée n’est pas automatiquement frauduleuse, mais la popularité d’une créatrice ne remplace pas les contrôles.'},{id:'rush',label:'Je fais confiance à sa popularité',explain:'Même une personne sincère peut se tromper ou promouvoir un service inadapté.'},{id:'ignore',label:'Toute publicité est forcément une escroquerie',explain:'Une publicité n’est pas nécessairement frauduleuse. Il faut examiner les faits, le prestataire et les risques.'}],
+ [{id:'check',label:'Je vais moi-même sur le site officiel',explain:'Un logo et une échéance peuvent être authentiques ou copiés. Accéder au service indépendamment du lien reçu permet de vérifier.'},{id:'rush',label:'Je clique directement sur le lien du message',explain:'Un logo, des avis ou des coordonnées ne suffisent pas à établir la fiabilité du lien.'},{id:'ignore',label:'Je ne réponds jamais à aucune administration',explain:'Ignorer systématiquement peut faire manquer une vraie démarche. Vérifie l’information par les canaux officiels.'}]
+];
+const lifeFeedback={
+ goal:{plan:'Mettre un objectif en mots aide à voir le chemin à parcourir.',compare:'Comparer les possibilités avant de dépenser donne plus de choix.',wait:'Prendre du temps pour décider est aussi une décision.'},
+ weekly:{save10:'Tu avances plus vite vers ton objectif, sans oublier tes autres besoins.',save5:'Épargner à ton rythme est déjà un progrès.',save0:'Tu conserves ton argent disponible cette semaine, sans obligation.'},
+ temptation:{buy:'Tu profites de cet achat, mais tu repousses ton objectif.',postpone:'Tu choisis de privilégier ton projet pour l’instant.'},
+ repair:{repair_now:'Une partie de l’épargne peut servir à financer un imprévu nécessaire.',verify:'Comparer les solutions est utile ; si la réparation est urgente, il faudra la financer.'},
+ next_month:{weekly10:'Un rythme régulier aide à estimer quand atteindre un objectif.',weekly5:'Un rythme moins rapide peut être mieux adapté aux moyens disponibles.',none:'Tu pourras définir un rythme plus tard.'},
+ reserve:{save100:'Tu mets une partie de ton budget à l’abri pour un imprévu.',save50:'Ta réserve commence à se constituer tout en préservant ton disponible.',save0:'Tu privilégies la souplesse ce mois-ci ; tu pourras ajuster ensuite.'},
+ leisure:{out45:'Tu profites d’une sortie qui réduit ton budget restant.',free:'Une activité sans dépense préserve davantage de souplesse.'},
+ emergency:{reserve_first:'La réserve permet d’absorber une partie de la réparation.',available_first:'Tu préserves ta réserve et utilises ton budget disponible.'},
+ purchase:{buy180:'Tu décides de consommer maintenant, ce qui réduit ton disponible.',postpone:'Tu conserves ton disponible et peux reconsidérer cet achat plus tard.'},
+ review:{plan:'Prévoir l’essentiel aide à mieux comprendre les marges possibles.',adjust:'Revoir les dépenses variables peut aider sans sacrifier les besoins essentiels.',help:'Chercher des aides adaptées est une démarche constructive.'}
+};
+const budgetPrompts={reserve:'Après les charges essentielles, combien souhaites-tu garder en réserve ?',leisure:'Une sortie à 45 € te tente. Tu peux aussi choisir une activité gratuite.',emergency:'Un appareil indispensable doit être réparé : 110 €. Comment payer ?',purchase:'Un appareil qui fonctionne encore a un nouveau modèle à 180 €. Que fais-tu ?',review:'Quel enseignement gardes-tu de ce mois ?'};
+const budgetTitles={reserve:'Construire une réserve',leisure:'Se faire plaisir',emergency:'Faire face à l’imprévu',purchase:'Acheter ou reporter',review:'Préparer la suite'};
+const labels={save100:'Mettre 100 € en réserve',save50:'Mettre 50 € en réserve',save0:'Ne rien réserver',out45:'Profiter de la sortie (45 €)',free:'Choisir une activité gratuite',reserve_first:'Utiliser la réserve puis le disponible',available_first:'Utiliser seulement le disponible',buy180:'Acheter pour 180 €',postpone:'Reporter cet achat',plan:'Planifier mes charges',adjust:'Adapter mes dépenses variables',help:'Vérifier les aides et demander conseil'};
+function emptyStore(){return {kind:'investifull-pedagogical-demo',schema:2,revision:0,theme:'eucalyptus',updated_at:null,modules:{first:null,budget:null,shield:null},ack:{first:0,budget:0,shield:0}};}
+function deepCopy(v){return JSON.parse(JSON.stringify(v));}
+function isValidShield(s){if(s===null)return true;if(!s||!Number.isInteger(s.index)||s.index<0||s.index>4||!Array.isArray(s.decisions)||s.decisions.length!==s.index)return false;return s.decisions.every((d,i)=>d&&d.scene_id===mods.shield.scenes[i].id&&['check','rush','ignore','legacy'].includes(d.choice_id));}
+function validStore(s){
+ if(!s||s.kind!=='investifull-pedagogical-demo'||s.schema!==2||!Number.isSafeInteger(s.revision)||s.revision<0||!['eucalyptus','violet'].includes(s.theme)||!s.modules||!s.ack)return false;
+ for(const k of MODULE_IDS){const st=s.modules[k];if(k==='shield'?!isValidShield(st):st!==null&&!engine.verify(mods[k],st))return false;const idx=st?.index||0,ack=s.ack[k];if(!Number.isInteger(ack)||ack<0||ack>idx||idx-ack>1)return false;}
+ return true;
+}
+function loadStore(){try{const raw=localStorage.getItem(STORAGE_KEY);if(!raw)return emptyStore();const s=JSON.parse(raw);if(!validStore(s))throw new Error('État local incompatible ou altéré. Il est conservé sans modification.');return s;}catch(err){if(err.name==='SecurityError'||err.name==='NotSupportedError'){storageAvailable=false;return emptyStore();}throw err;}}
+try{current=loadStore();}catch(err){blocked=true;current=emptyStore();alertText='Sauvegarde locale non lisible : '+err.message+' Aucune donnée n’a été effacée.';alertType='error';}
+// Use a harmless URL fragment as the reference across reload. This lets us detect
+// storage loss even when localStorage vanishes after reopening the page.
+function completeStorageDiagnostic(){
+ const match=location.hash.match(/^#if075check=([a-z0-9.-]{8,80})$/i);
+ if(!match)return;
+ let ok=false,reason='';
+ try{const value=localStorage.getItem(STORAGE_DIAG_KEY);ok=value===match[1];if(ok)localStorage.removeItem(STORAGE_DIAG_KEY);
+   else reason='Le témoin n’a pas été retrouvé après rechargement.';
+ }catch(err){reason='Accès au stockage refusé : '+err.message;}
+ try{history.replaceState(null,'',location.pathname+location.search);}catch{try{location.hash='';}catch{}}
+ if(!blocked){
+   alertText=ok?'Test de sauvegarde RÉUSSI sur ce navigateur : un témoin écrit a survécu au rechargement. Ce test ne garantit pas une sauvegarde définitive ni une synchronisation.':'Test de sauvegarde NON CONCLUANT : '+reason+' Exporte manuellement ta progression avant de fermer.';
+   alertType=ok?'notice':'error';
+ }
+}
+function startStorageDiagnostic(shouldReload=true){
+ if(busy){setAlert('Une opération est en cours : réessaie après sa confirmation.','error');render();return false;}
+ try{
+   const token=(Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,14)).toLowerCase();
+   localStorage.setItem(STORAGE_DIAG_KEY,token);
+   if(localStorage.getItem(STORAGE_DIAG_KEY)!==token)throw new Error('Écriture non confirmée.');
+   location.hash='if075check='+token;
+   if(shouldReload)location.reload();
+   return true;
+ }catch(err){setAlert('Test impossible : '+err.message+'. Aucun parcours n’a été effacé.','error');render();return false;}
+}
+completeStorageDiagnostic();
+function setAlert(s,type='notice'){alertText=s;alertType=type;}
+function money(cents){return new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:2}).format(cents/100);}
+function node(tag,txt,cls){const e=document.createElement(tag);if(txt!==undefined&&txt!==null)e.textContent=txt;if(cls)e.className=cls;return e;}
+function add(p,...items){for(const el of items)p.append(el);return p;}
+function btn(txt,cls,click){const b=node('button',txt,cls);b.type='button';b.addEventListener('click',click);if(blocked)b.disabled=true;return b;}
+function indexOf(k){return current.modules[k]?.index||0;}
+function infoMessage(err){setAlert(err instanceof Error?err.message:String(err),'error');render();}
+async function commit(update,options={}){
+ if(blocked||busy)return false;busy=true;
+ const perform=()=>{
+   let latest;
+   try{latest=storageAvailable?loadStore():deepCopy(current);}catch(err){throw new Error('Données locales non lisibles : aucune écriture effectuée.');}
+   // An external copy can change without incrementing its revision (e.g.
+   // a legacy writer, a manual restoration or a broken multi-tab writer).
+   // Refuse to overwrite *any* unexpected content, not merely a new revision.
+   if(latest.revision!==current.revision||JSON.stringify(latest)!==JSON.stringify(current)){
+     current=latest;
+     setAlert('Un changement externe de la progression a été détecté, même si son numéro de version est inchangé. Les nouvelles données ont été chargées ; ton choix n’a pas été écrasé. Vérifie-les avant de continuer.','error');
+     return false;
+   }
+   const next=deepCopy(latest);if(update(next)===false)return false;
+   next.revision=latest.revision+1;next.updated_at=new Date().toISOString();
+   if(!validStore(next))throw new Error('Validation refusée : état de progression incohérent.');
+   if(storageAvailable){
+     const serialized=JSON.stringify(next);
+     let previousRecovery=null,checkpointWritten=false;
+     if(options.checkpointBeforeImport){
+       // A V5 defect allowed a failed import checkpoint to become active after
+       // an unrelated subsequent edit at the same revision. Bind the recovery
+       // to the complete, exact POST-IMPORT state, not only a revision number.
+       previousRecovery=localStorage.getItem(STORAGE_RECOVERY_KEY);
+       const checkpoint=JSON.stringify({
+         kind:'if075-recovery-v6',date:new Date().toISOString(),
+         after_import_revision:next.revision,after_import_snapshot:serialized,
+         data:latest
+       });
+       localStorage.setItem(STORAGE_RECOVERY_KEY,checkpoint);
+       checkpointWritten=true;
+       if(localStorage.getItem(STORAGE_RECOVERY_KEY)!==checkpoint)throw new Error('Point de retour non confirmé ; import annulé.');
+     }
+     try{
+       localStorage.setItem(STORAGE_KEY,serialized);
+       if(localStorage.getItem(STORAGE_KEY)!==serialized)throw new Error('La sauvegarde locale n’a pas été confirmée.');
+     }catch(err){
+       if(options.checkpointBeforeImport&&checkpointWritten){
+         // Only roll back the staged checkpoint when primary storage is
+         // CONFIRMED unchanged. If uncertain, retain the bound snapshot;
+         // it can never authorize undo of a different subsequent edit.
+         try{
+           if(localStorage.getItem(STORAGE_KEY)===JSON.stringify(latest)){
+             if(previousRecovery===null)localStorage.removeItem(STORAGE_RECOVERY_KEY);
+             else localStorage.setItem(STORAGE_RECOVERY_KEY,previousRecovery);
+           }
+         }catch{};
+       }
+       throw err;
+     }
+   }
+   current=next;setAlert(storageAvailable?'Choix enregistré sur cet appareil.':'Choix effectué uniquement en mémoire. La sauvegarde est indisponible.');return true;
+ };
+ try{
+   const result=(storageAvailable&&navigator.locks?.request)?await navigator.locks.request('if075_demo_write_v2',{mode:'exclusive'},perform):perform();
+   if(!navigator.locks?.request&&storageAvailable)setAlert(result?'Choix conservé localement. Attention : protection simultanée de deux onglets non garantie sur ce navigateur.':alertText,result?'notice':alertType);
+   return result;
+ }catch(err){setAlert('Enregistrement impossible : '+err.message+'. Le résultat de l’écriture peut être incertain ; vérifie la progression après rechargement avant de réessayer.','error');return false;}
+ finally{busy=false;render();}
+}
+function readRecovery(){
+ const raw=localStorage.getItem(STORAGE_RECOVERY_KEY);
+ if(!raw)return null;
+ const v=JSON.parse(raw);
+ if(!v||!validStore(v.data))throw new Error('Point de retour invalide.');
+ const expected=v.data.revision+1;
+ if(v.after_import_revision!==undefined&&v.after_import_revision!==expected)throw new Error('Révision de récupération incohérente.');
+ if(v.kind==='if075-recovery-v4'){
+   // Legacy V4/V5 checkpoints contain no authenticated post-import identity.
+   // Revision alone cannot distinguish a completed import from a failed import
+   // followed by a new, unrelated edit. Preserve legacy bytes, disable undo.
+   return {...v,legacy:true,after_import_revision:expected};
+ }
+ if(v.kind!=='if075-recovery-v6')throw new Error('Format de récupération inconnu.');
+ if(typeof v.after_import_snapshot!=='string')throw new Error('Identité de récupération manquante.');
+ let after;
+ try{after=JSON.parse(v.after_import_snapshot);}catch{throw new Error('État importé attendu illisible.');}
+ if(!validStore(after)||after.revision!==expected)throw new Error('État importé attendu invalide.');
+ return {...v,after_import_revision:expected};
+}
+function canRestoreRecovery(recovery,reference=current){
+ return !!recovery&&!recovery.legacy&&storageAvailable&&!blocked&&
+   reference.revision===recovery.after_import_revision&&
+   JSON.stringify(reference)===recovery.after_import_snapshot;
+}
+
+async function restoreBeforeImport(){
+ if(blocked){setAlert('Restauration indisponible tant que le stockage courant est illisible. Exporte la copie brute avant toute action.','error');render();return;}
+ let recovery;
+ try{recovery=readRecovery();if(!recovery)throw new Error('Aucun point de retour disponible.');
+   if(!canRestoreRecovery(recovery))throw new Error('La progression a évolué depuis l’import. Le retour automatique est bloqué pour ne pas perdre ces nouveaux choix. Fais un export manuel avant toute autre opération.');}
+ catch(err){setAlert('Impossible de revenir en arrière : '+err.message,'error');render();return;}
+ if(!confirm('Revenir à la progression précédente ?\n\nActuel : '+summaryOfProgress(current)+'\nAvant import : '+summaryOfProgress(recovery.data)+'\n\nCela remplacera les choix de cette seule démonstration.'))return;
+ const target=deepCopy(recovery.data);
+ const ok=await commit(s=>{if(!canRestoreRecovery(recovery,s))throw new Error('Le point de retour ne correspond plus à la progression courante. Aucune restauration effectuée.');s.modules=deepCopy(target.modules);s.ack=deepCopy(target.ack);s.theme=target.theme;});
+ if(!ok)return;
+ try{localStorage.removeItem(STORAGE_RECOVERY_KEY);setAlert('Progression précédente restaurée. Le point de retour temporaire a été supprimé.');}
+ catch(err){setAlert('Progression restaurée, mais le point de retour n’a pas pu être supprimé : '+err.message,'error');}
+ render();
+}
+function saveStatus(){const el=$('saveStatus');el.classList.toggle('warn',!storageAvailable||blocked);el.lastElementChild.textContent=blocked?'Données locales à vérifier':storageAvailable?'Sauvegarde locale disponible':'Mode temporaire non sauvegardé';}
+function activeTab(k){active=k;setAlert('');render();$('exercise').scrollIntoView({behavior:'smooth',block:'start'});}
+function progress(outer,idx,total){const line=node('div',null,'step-caption');add(line,node('span','Étape '+Math.min(idx+1,total)+' / '+total),node('span',Math.round(idx/total*100)+' % accompli'));outer.append(line);const track=node('div',null,'progress-track');const fill=node('div',null,'progress-fill');fill.style.width=(idx/total*100)+'%';track.append(fill);outer.append(track);}
+function balances(el,k,state){const b=state.balances,strip=node('div',null,'balance-strip');
+ const arr=k==='first'?[['Épargne fictive',money(b.savings_cents)],['Objectif',money(b.goal_cents)]]:[['Argent disponible',money(b.available_cents)],['Réserve constituée',money(b.reserve_cents)]];
+ arr.forEach(([label,v])=>{const div=node('div',null,'balance-box');add(div,node('small',label),node('strong',v));strip.append(div);});el.append(strip);
+}
+function renderFeedback(el,k,st){const prev=st.index-1,d=st.decisions[prev],scene=mods[k].scenes[prev];const expl=lifeFeedback[scene.id]?.[d.choice_id]||'Prendre du recul aide à comprendre les conséquences.';const block=node('div',null,'feedback');
+ add(block,node('span','LE POINT À RETENIR','feedback-badge'),node('h3','Ton choix : '+(scene.choices.find(c=>c.id===d.choice_id)?.label||labels[d.choice_id]||d.choice_id)),node('p',expl));
+ block.append(btn('J’ai compris · Continuer →','primary-button',async()=>{await commit(s=>{s.ack[k]=st.index;});}));el.append(block);
+}
+function renderShieldFeedback(el,st){const prior=st.index-1;const choice=st.decisions[prior].choice_id;const op=shieldOptions[prior].find(x=>x.id===choice);const block=node('div',null,'feedback');add(block,node('span','LE RÉFLEXE À RETENIR','feedback-badge'),node('h3','Vérifier sans céder à la pression'),node('p',op?op.explain:'Ancienne progression importée : réponse non mémorisée.'));block.append(btn('Continuer →','primary-button',async()=>commit(s=>{s.ack.shield=st.index;})));el.append(block);}
+function renderFinal(el,k,st){const box=node('div',null,'complete');add(box,node('span','PARCOURS TERMINÉ','eyebrow green'),node('h3',k==='shield'?'Des réflexes plus sûrs':'Tu as exploré tes choix'),node('p',k==='shield'?'Tu peux maintenant chercher une preuve indépendante sans ignorer toutes les démarches. Il n’y a pas de note.':'Tes décisions ont des conséquences, pas une valeur morale. Tu peux expérimenter d’autres chemins.'));
+ if(k==='first'){const b=st.balances;const target=st.weekly_target_cents,remaining=Math.max(0,b.goal_cents-b.savings_cents);box.append(node('p','Épargne : '+money(b.savings_cents)+' · Restant : '+money(remaining)+(target?(' · Rythme envisagé : '+Math.ceil(remaining/target)+' semaine(s)'):' · Rythme à définir')));}
+ else if(k==='budget'){const b=st.balances;box.append(node('p','Disponible : '+money(b.available_cents)+' · Réserve : '+money(b.reserve_cents)+' · Total non dépensé : '+money(b.available_cents+b.reserve_cents)));}
+ const list=node('div',null,'summary-list');st.decisions.forEach((d,i)=>{const item=node('div',null,'summary-item'),label=k==='shield'?shieldOptions[i].find(x=>x.id===d.choice_id)?.label||'Choix ancien non conservé':(mods[k].scenes[i].choices.find(c=>c.id===d.choice_id)?.label||labels[d.choice_id]||d.choice_id);add(item,node('strong',`Décision ${i+1}`),node('span',label));list.append(item);});box.append(list);el.append(box);
+}
+function renderLife(el,k){const mod=mods[k],st=current.modules[k]||engine.initialize(mod);progress(el,st.index,mod.scenes.length);balances(el,k,st);
+ if(st.index>current.ack[k]){renderFeedback(el,k,st);return;}
+ if(st.index>=mod.scenes.length){renderFinal(el,k,st);return;}
+ const scene=mod.scenes[st.index];add(el,node('div','TA PROCHAINE DÉCISION','scene-label'),node('h3',k==='first'?['Définir son objectif','Avancer à son rythme','Une envie imprévue','Une réparation nécessaire','Prévoir les prochaines semaines'][st.index]:budgetTitles[scene.id],'scene-title'),node('p',scene.prompt||budgetPrompts[scene.id],'scene-prompt'));
+ const choices=node('div',null,'choice-grid');scene.choices.forEach(c=>{const label=c.label||labels[c.id]||c.id;const button=node('button',null,'choice');button.type='button';add(button,node('span',null,'choice-dot'),node('span',label));button.disabled=blocked;button.addEventListener('click',async()=>{let rejected='';const ok=await commit(s=>{const was=s.modules[k]||engine.initialize(mod);const next=engine.choose(mod,was,c.id);if(!next.ok){rejected=next.error;return false;}s.modules[k]=next.state;});if(rejected){setAlert(rejected,'error');render();}});choices.append(button);});el.append(choices);
+ if(k==='budget')el.append(node('p','Montants fictifs : les charges essentielles de 1 100 € ont été déduites au départ. Aucun découvert automatique.','hint'));
+}
+function renderShield(el){const mod=mods.shield,st=current.modules.shield||{index:0,decisions:[]};progress(el,st.index,mod.scenes.length);
+ if(st.index>current.ack.shield){renderShieldFeedback(el,st);return;}
+ if(st.index>=mod.scenes.length){renderFinal(el,'shield',st);return;}
+ const scene=mod.scenes[st.index];add(el,node('div','VÉRIFIER AVANT D’AGIR','scene-label'),node('h3','Situation '+(st.index+1),'scene-title'),node('p',scene.prompt,'scene-prompt'));
+ const choices=node('div',null,'choice-grid');shieldOptions[st.index].forEach(c=>{const b=node('button',null,'choice');b.type='button';add(b,node('span',null,'choice-dot'),node('span',c.label));b.disabled=blocked;b.addEventListener('click',()=>commit(s=>{const old=s.modules.shield||{index:0,decisions:[]};s.modules.shield={index:old.index+1,decisions:[...old.decisions,{scene_id:scene.id,choice_id:c.id}]};}));choices.append(b);});el.append(choices);
+ el.append(node('p','Chaque choix déclenche une explication. Aucun score ni message personnel enregistré.','hint'));
+}
+function render(){
+ let recoveryAvailable=false,legacyRecovery=false;
+ try{const checkpoint=readRecovery();recoveryAvailable=canRestoreRecovery(checkpoint);
+   legacyRecovery=!!checkpoint?.legacy&&current.revision===checkpoint.after_import_revision;}catch{};
+ if(legacyRecovery&&!alertText)setAlert('Ancien point de retour V4/V5 détecté : son import n’est pas vérifiable. Il a été conservé mais le retour automatique est désactivé pour protéger les nouveaux choix. Exporte ta progression actuelle.');
+ $('recoverImport').hidden=!recoveryAvailable;
+ document.body.classList.toggle('violet',current.theme==='violet');$('themeText').textContent=current.theme==='violet'?'Violet':'Eucalyptus';saveStatus();
+ const foot={first:'footFirst',budget:'footBudget',shield:'footShield'};for(const k of MODULE_IDS){const b=$('tab'+k[0].toUpperCase()+k.slice(1));b.setAttribute('aria-pressed',k===active?'true':'false');const ix=indexOf(k);$(foot[k]).textContent=ix===0?(k==='shield'?'4 situations':'5 décisions'):ix===mods[k].scenes.length?'Terminé ✓':`Étape ${ix}/${mods[k].scenes.length}`;}
+ $('exerciseTitle').textContent=mods[active].title;$('errorBox').hidden=!alertText;if(alertText){$('errorBox').textContent=alertText;$('errorBox').classList.toggle('error-box',true);$('errorBox').style.background=alertType==='error'?'#fff0ed':'#edf7eb';$('errorBox').style.color=alertType==='error'?'#8f332b':'#28583a';}
+ const el=$('exerciseBody');el.textContent='';const wrap=node('div',null,'scene-wrap');if(blocked){wrap.append(node('p','Les données locales de cette démonstration semblent incompatibles. Tu peux les exporter pour diagnostic avant tout effacement. Aucune écriture ne sera tentée.','scene-error'));}else if(active==='shield')renderShield(wrap);else renderLife(wrap,active);el.append(wrap);
+}
+async function exportData(){let value=current;if(blocked){try{const raw=localStorage.getItem(STORAGE_KEY);if(raw){const blob=new Blob([raw],{type:'text/plain'});download(blob,'InvestiFull_DEMO_donnees_non_lisibles.txt');setAlert('Copie brute sauvegardée. Ne pas l’importer comme une archive valide.');render();return;}}catch{}}
+ if(!validStore(value)){setAlert('Export refusé : état incohérent.','error');render();return;}
+ const payload={export_type:'investifull-demo-offline-v2',export_date:new Date().toISOString(),notice:'Données de démonstration fictives uniquement. Pas de synchronisation cloud.',data:value};download(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),'InvestiFull_DEMO_progression_2026-11-15.json');setAlert('Fichier JSON téléchargé : export manuel, pas synchronisation.');render();}
+function download(blob,name){const url=URL.createObjectURL(blob),a=node('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);}
+function summaryOfProgress(s){
+ const names={first:'Premier projet',budget:'Budget',shield:'Bouclier'};
+ return MODULE_IDS.map(k=>names[k]+': '+(s.modules[k]?.index||0)+'/'+mods[k].scenes.length).join(' ; ');
+}
+function exportEnvelope(value){return {export_type:'investifull-demo-offline-v2',export_date:new Date().toISOString(),notice:'Données fictives ; pas de synchronisation cloud.',data:value};}
+async function importData(file){
+ if(!file)return;
+ if(blocked){setAlert('Import bloqué : la sauvegarde locale actuelle est illisible. Exporte la copie brute et vérifie-la avant toute autre action.','error');render();return;}
+ if(file.size>MAX_IMPORT){setAlert('Import refusé : fichier supérieur à 256 Ko.','error');render();return;}
+ try{
+   const payload=JSON.parse(await file.text());
+   if(payload.export_type!=='investifull-demo-offline-v2'||!validStore(payload.data))throw new Error('Format, version ou progression non valides.');
+   const imported=deepCopy(payload.data);
+   const oldSummary=summaryOfProgress(current),newSummary=summaryOfProgress(imported);
+   const hasWork=MODULE_IDS.some(k=>current.modules[k]?.index>0);
+   const older=Boolean(imported.updated_at&&current.updated_at&&Date.parse(imported.updated_at)<Date.parse(current.updated_at));
+   const message='État actuel : '+oldSummary+'\nÉtat à importer : '+newSummary+'\n\n'+(older?'ATTENTION : fichier plus ancien que la progression locale.\n\n':'')+'Les choix de cette démonstration seront remplacés, jamais les sources Flutter. Continuer ?';
+   if(!confirm(message))return;
+   if(hasWork){
+     // A separate JSON backup is offered before replacing an existing progression.
+     const backup=exportEnvelope(deepCopy(current));
+     download(new Blob([JSON.stringify(backup,null,2)],{type:'application/json'}),'InvestiFull_DEMO_SECURITE_AVANT_IMPORT.json');
+     if(!confirm('Une COPIE DE SÉCURITÉ de ta progression actuelle vient d’être proposée au téléchargement. Vérifie qu’elle est bien enregistrée.\n\nOK = remplacer les choix de la démo. Annuler = conserver les choix actuels.'))return;
+   }
+   if(!storageAvailable)throw new Error('Import impossible : stockage local indisponible. Exporte ta progression et réessaie sur un navigateur qui autorise la sauvegarde.');
+   const success=await commit(s=>{s.modules=deepCopy(imported.modules);s.ack=deepCopy(imported.ack);s.theme=imported.theme;},{checkpointBeforeImport:true});
+   if(success){setAlert('Progression importée. Un point de retour local vérifié permet d’annuler ce dernier import. Pour une sécurité durable, conserve aussi un export sur un autre support.');render();}
+ }catch(err){setAlert('Import refusé, progression actuelle conservée : '+err.message,'error');render();}
+}
+
+for(const k of MODULE_IDS)$('tab'+k[0].toUpperCase()+k.slice(1)).addEventListener('click',()=>activeTab(k));
+$('theme').addEventListener('click',()=>commit(s=>{s.theme=s.theme==='eucalyptus'?'violet':'eucalyptus';}));
+$('resetOne').addEventListener('click',async()=>{if(!confirm('Recommencer uniquement ce parcours de démonstration ?'))return;await commit(s=>{s.modules[active]=null;s.ack[active]=0;});});
+function clearRecoveryAndMarker(){
+ for(const key of [STORAGE_RECOVERY_KEY,STORAGE_DIAG_KEY]){
+   localStorage.removeItem(key);
+   if(localStorage.getItem(key)!==null)throw new Error('Suppression non confirmée : '+key);
+ }
+}
+$('clear').addEventListener('click',async()=>{if(!confirm('Effacer toutes les données de CETTE DÉMONSTRATION sur ce navigateur, y compris le point de retour ? Les autres fichiers InvestiFull ne seront pas touchés.'))return;
+ if(blocked){if(!confirm('La sauvegarde est endommagée. Confirmer une deuxième fois la suppression des données de cette seule démo ?'))return;try{localStorage.removeItem(STORAGE_KEY);if(localStorage.getItem(STORAGE_KEY)!==null)throw new Error('Effacement principal non confirmé.');clearRecoveryAndMarker();blocked=false;current=emptyStore();setAlert('Toutes les données locales de démonstration ont été effacées.');render();}catch(err){infoMessage(err);}return;}
+ const ok=await commit(s=>{s.modules={first:null,budget:null,shield:null};s.ack={first:0,budget:0,shield:0};s.theme='eucalyptus';});
+ if(!ok)return;
+ try{clearRecoveryAndMarker();setAlert('Progression remise à zéro et point de retour effacé.');}
+ catch(err){setAlert('Progression remise à zéro, mais une donnée auxiliaire reste à effacer : '+err.message,'error');}
+ render();
+});
+$('checkStorage').addEventListener('click',()=>startStorageDiagnostic(true));
+$('recoverImport').addEventListener('click',restoreBeforeImport);
+$('export').addEventListener('click',exportData);
+$('import').addEventListener('click',()=>$('importFile').click());
+$('importFile').addEventListener('change',e=>{importData(e.target.files[0]);e.target.value='';});
+window.addEventListener('storage',e=>{if(e.key!==STORAGE_KEY)return;try{const v=loadStore();current=v;setAlert('Mise à jour détectée depuis un autre onglet. Vérifie les choix affichés avant de continuer.');render();}catch{blocked=true;setAlert('L’autre onglet a laissé des données non lisibles. Aucune donnée supprimée.','error');render();}});
+render();
+</script>
+</body></html>
